@@ -2,8 +2,21 @@ import React, { Component } from 'react';
 import { View, Text, Image, StyleSheet, NavigatorExperimental } from 'react-native';
 
 export default class SplashView extends Component {
-    constructor() {
-        super();
+    constructor(props, context) {
+        super(props, context);
+
+        this.state = {
+            navigationState: {
+                index: 0,
+                routes: [{key: "Splash Scene"}]
+            },
+        };
+
+        this._onNavigationChange = this._onNavigationChange.bind(this);
+    }
+
+    _onNavigationChange(type) {
+
     }
 
     render() {
