@@ -1,0 +1,49 @@
+exports[`test renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "alignSelf": "stretch",
+      "backgroundColor": "#f6f6f6",
+      "flex": 1,
+    }
+  }>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Object {
+        "alignSelf": "center",
+        "fontSize": 30,
+        "marginTop": 142,
+        "opacity": 0.6,
+        "textAlign": "center",
+      }
+    }>
+    Doodle Now
+  </Text>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Object {
+        "fontSize": 20,
+        "marginTop": 5,
+        "opacity": 0.5,
+      }
+    }>
+    for Stand Up
+  </Text>
+  <Image
+    source={1}
+    style={
+      Object {
+        "height": 143,
+        "marginTop": 61,
+        "width": 143,
+      }
+    } />
+</View>
+`;
