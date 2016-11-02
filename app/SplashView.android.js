@@ -1,32 +1,36 @@
 import React, { Component } from 'react';
-import { View, Text, Image, StyleSheet, NavigatorExperimental } from 'react-native';
+import {Actions} from 'react-native-router-flux';
+import { View, Text, Image, StyleSheet, NavigatorExperimental, Animated } from 'react-native';
 
 export default class SplashView extends Component {
     constructor(props, context) {
         super(props, context);
-
         this.state = {
-            navigationState: {
-                index: 0,
-                routes: [{key: "Splash Scene"}]
-            },
+            fadeAnimation: new Animated.Value(1)
         };
 
-        this._onNavigationChange = this._onNavigationChange.bind(this);
-    }
-
-    _onNavigationChange(type) {
-
+        this.state.fadeAnimation.addListener(({value}) => {
+            if(value === 0) {
+                Actions.doodlePagerView();
+            }
+        });
     }
 
     render() {
         return (
-            <View style={styles.container}>
+            <Animated.View style={[styles.container, {opacity: this.state.fadeAnimation}]}>
                 <Text style={styles.title}>Doodle Now</Text>
                 <Text style={styles.secondaryTitle}>for Stand Up</Text>
-                <Image style={styles.mainImage} source={require('../images/act_logo.png')}/>
-            </View>
+                <Image style={styles.mainImage} source={require('../images/act_logo.png')} />
+            </Animated.View>
         );
+    }
+
+    componentDidMount() {
+        Animated.timing(
+            this.state.fadeAnimation,
+            {toValue: 0, duration: 1000, delay: 1000}
+        ).start();
     }
 }
 
