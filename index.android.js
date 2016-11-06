@@ -12,8 +12,8 @@ export default class Vulture extends Component {
         return (
             <Router>
                 <Scene key="root">
-                    <Scene key="splashView" component={SplashView} title="Splash View" initial={true} hideNavBar={true} animation="fade" duration={1000} />
-                    <Scene key="doodlePagerView" component={DoodlePagerView} title="Doodle Now" hideNavBar={false} />
+                    {/*<Scene key="splashView" component={SplashView} title="Splash View" initial={true} hideNavBar={true} animation="fade" duration={1000} />*/}
+                    <Scene key="doodlePagerView" component={DoodlePagerView} title="Doodle Now" hideNavBar={true} />
                 </Scene>
             </Router>
         );

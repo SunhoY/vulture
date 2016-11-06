@@ -12,8 +12,8 @@ Vulture=function(_Component){_inherits(Vulture,_Component);function Vulture(){_c
 return(
 _react2.default.createElement(_reactNativeRouterFlux.Router,null,
 _react2.default.createElement(_reactNativeRouterFlux.Scene,{key:'root'},
-_react2.default.createElement(_reactNativeRouterFlux.Scene,{key:'splashView',component:_SplashView2.default,title:'Splash View',initial:true,hideNavBar:true,animation:'fade',duration:1000}),
-_react2.default.createElement(_reactNativeRouterFlux.Scene,{key:'doodlePagerView',component:_DoodlePagerView2.default,title:'Doodle Now',hideNavBar:false}))));
+
+_react2.default.createElement(_reactNativeRouterFlux.Scene,{key:'doodlePagerView',component:_DoodlePagerView2.default,title:'Doodle Now',hideNavBar:true}))));
 
 
 
