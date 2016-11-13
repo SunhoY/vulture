@@ -1,14 +1,13 @@
-import React, {Component} from 'react';
-import {Text, Image, StyleSheet} from 'react-native';
+import React, {Component, PropTypes} from 'react';
+import {Text, Image, StyleSheet, View} from 'react-native';
 
 export default class DoodleRowItem extends Component {
     render() {
         var item = this.props.item;
-        console.log(item);
 
         return (
             <View style={styles.rowContainer}>
-                <Text style={styles.timeElapsed}>{item.createdAt}</Text>
+                <Text style={styles.timeElapsed}>{item.timeElapsed}</Text>
                 <Text numberOfLines={1} style={styles.title}>{item.title}</Text>
                 <Text style={styles.content}>{item.content}</Text>
                 <Image style={styles.doodleImage}
@@ -18,6 +17,15 @@ export default class DoodleRowItem extends Component {
         );
     }
 }
+
+DoodleRowItem.PropTypes = {
+    item: PropTypes.shape({
+        title: PropTypes.string.isRequired,
+        content: PropTypes.string,
+        imageUrl: PropTypes.object.isRequired,
+        timeElapsed: PropTypes.string.isRequired
+    })
+};
 
 const styles = StyleSheet.create({
     rowContainer: {

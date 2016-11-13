@@ -6,6 +6,7 @@ import {
 
 import SplashView from './app/SplashView.android';
 import DoodlePagerView from './app/DoodlePagerView.android';
+import DoodleListContainer from './app/DoodleListContainer.android';
 
 export default class Vulture extends Component {
     render() {
@@ -13,7 +14,8 @@ export default class Vulture extends Component {
             <Router>
                 <Scene key="root">
                     {/*<Scene key="splashView" component={SplashView} title="Splash View" initial={true} hideNavBar={true} animation="fade" duration={1000} />*/}
-                    <Scene key="doodlePagerView" component={DoodlePagerView} title="Doodle Now" hideNavBar={true} />
+                    {/*<Scene key="doodlePagerView" component={DoodlePagerView} title="Doodle Now" hideNavBar={true} />*/}
+                    <Scene key="doodleListContainer" component={DoodleListContainer} title="Doodle Now" hideNavBar={true} />
                 </Scene>
             </Router>
         );

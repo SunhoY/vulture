@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {View, Text, ViewPagerAndroid, StyleSheet} from 'react-native';
-import DoodleList from './DoodleList.android';
+import DoodleList from './DoodleListContainer.android';
 
 export default class DoodlePagerView extends Component {
     render() {

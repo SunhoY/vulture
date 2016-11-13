@@ -1,14 +1,14 @@
 import 'react-native';
 import React from 'react';
-import Vulture from '../index.android.js';
+import LandingPage from '../../app/LandingPage.android';
 
 // Note: test renderer must be required after react-native.
 import renderer from 'react-test-renderer';
 
 it('renders correctly', () => {
-  // const tree = renderer.create(
-  //   <Vulture />
-  // );
-  //
-  // expect(tree).toMatchSnapshot();
+    // const tree = renderer.create(
+    //     <LandingPage />
+    // );
+    //
+    // expect(tree).toMatchSnapshot();
 });

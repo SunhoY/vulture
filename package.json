@@ -9,27 +9,20 @@
   "dependencies": {
     "firebase": "^3.5.3",
     "react": "15.3.2",
+    "react-addons-shallow-compare": "^15.3.2",
     "react-native": "0.37.0",
     "react-native-router-flux": "^3.36.0",
-    "react-native-scrollable-tab-view": "^0.6.0"
+    "react-native-tab-view": "0.0.38"
   },
   "jest": {
-    "preset": "jest-react-native",
-    "haste": {
-      "defaultPlatform": "ios",
-      "platforms": ["android", "ios"],
-      "providesModuleNodeModules": [
-        "react",
-        "react-native"
-      ]
-    },
-    "moduleFileExtensions": ["js", "json", "jsx", "android.js", "ios.js"]
+    "preset": "jest-react-native"
   },
   "devDependencies": {
     "babel-jest": "16.0.0",
     "babel-preset-react-native": "1.9.0",
     "jest": "16.0.2",
     "jest-react-native": "16.1.0",
+    "mockdate": "^2.0.0",
     "react-test-renderer": "15.3.2",
     "whatwg-fetch": "1.0.0"
   }
