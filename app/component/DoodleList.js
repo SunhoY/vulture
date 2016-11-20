@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {ListView} from 'react-native';
-import DoodleRowItem from './DoodleRowItem.android';
+import DoodleRowItem from './DoodleRowItem';
 
 export default class DoodleList extends Component {
     constructor(props) {

@@ -1,0 +1,1 @@
+{"version":3,"sources":["DoodleCreate.js"],"names":[],"mappings":"AAAA,4B;AACA,yC;;AAEM,Y","file":"DoodleCreate-compiled.js","sourcesContent":["import React, {Component} from 'react';\nimport {Text, View} from 'react-native';\n\nclass DoodleCreate extends Component {\n\n}"]}

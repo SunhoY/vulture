@@ -1,27 +1,32 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import {Actions} from 'react-native-router-flux';
+import {connect} from 'react-redux';
 import { View, Text, Image, StyleSheet, NavigatorExperimental, Animated } from 'react-native';
 
-export default class SplashView extends Component {
+class SplashView extends Component {
     constructor(props, context) {
         super(props, context);
+
         this.state = {
             fadeAnimation: new Animated.Value(1)
         };
 
+        const {onAnimationEnd} = this.props;
+
         this.state.fadeAnimation.addListener(({value}) => {
             if(value === 0) {
-                Actions.doodlePagerView();
+                onAnimationEnd();
             }
         });
     }
 
     render() {
+        console.log(this.props);
         return (
             <Animated.View style={[styles.container, {opacity: this.state.fadeAnimation}]}>
                 <Text style={styles.title}>Doodle Now</Text>
                 <Text style={styles.secondaryTitle}>for Stand Up</Text>
-                <Image style={styles.mainImage} source={require('../images/act_logo.png')} />
+                <Image style={styles.mainImage} source={require('../../images/act_logo.png')} />
             </Animated.View>
         );
     }
@@ -33,6 +38,19 @@ export default class SplashView extends Component {
         ).start();
     }
 }
+
+const propTypes = {
+    routes: PropTypes.object,
+    onAnimationEnd: PropTypes.func,
+};
+
+SplashView.PropTypes = propTypes;
+
+function select({routes}) {
+    return {routes};
+}
+
+export default connect(select)(SplashView);
 
 const styles = StyleSheet.create({
     container: {

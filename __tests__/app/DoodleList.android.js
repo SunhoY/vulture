@@ -5,7 +5,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 
 import {ListView} from 'react-native';
-import DoodleList from '../../app/DoodleList.android';
+import DoodleList from '../../app/component/DoodleList';
 
 it("renders correctly", () => {
     var dataSource = new ListView.DataSource({

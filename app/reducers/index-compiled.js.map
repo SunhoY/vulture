@@ -1,0 +1,1 @@
+{"version":3,"sources":["index.js"],"names":[],"mappings":"yDAAA;AACA,gC;AACA,2C;;AAEe,2BAAgB;AAC3B,uBAD2B,CACnB,iCADmB,CAAhB,C","file":"index-compiled.js","sourcesContent":["import { combineReducers } from 'redux';\nimport routes from './routes';\nimport someReducer from './some-reducer';\n\nexport default combineReducers({\n    routes, someReducer\n});\n"]}

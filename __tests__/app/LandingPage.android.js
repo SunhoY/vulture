@@ -1,6 +1,6 @@
 import 'react-native';
 import React from 'react';
-import LandingPage from '../../app/LandingPage.android';
+import LandingPage from '../../app/component/LandingPage';
 
 // Note: test renderer must be required after react-native.
 import renderer from 'react-test-renderer';
