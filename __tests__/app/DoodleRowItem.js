@@ -2,7 +2,7 @@ import 'react-native';
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-import DoodleRowItem from '../../app/DoodleRowItem.android';
+import DoodleRowItem from '../../app/component/DoodleRowItem';
 
 describe("Rendering", () => {
     let commonItem = {

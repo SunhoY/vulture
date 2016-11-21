@@ -31,7 +31,7 @@ describe("DoodleListContainer Test", ()=>{
             };
         });
 
-        const DoodleListContainer = require('../../app/DoodleListContainer.android').default;
+        const DoodleListContainer = require('../../app/component/DoodleListContainer.js').default;
         tree = renderer.create(
             <DoodleListContainer />
         );

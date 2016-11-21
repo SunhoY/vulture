@@ -1,19 +1,23 @@
 import React, {Component, PropTypes} from 'react';
-import {Text, Image, StyleSheet, View} from 'react-native';
+import {Text, Image, StyleSheet, View, TouchableWithoutFeedback} from 'react-native';
+import {Actions} from 'react-native-router-flux';
+
 
 export default class DoodleRowItem extends Component {
     render() {
-        var item = this.props.item;
+        const {item} = this.props;
 
         return (
-            <View style={styles.rowContainer}>
-                <Text style={styles.timeElapsed}>{item.timeElapsed}</Text>
-                <Text numberOfLines={1} style={styles.title}>{item.title}</Text>
-                <Text style={styles.content}>{item.content}</Text>
-                <Image style={styles.doodleImage}
-                       source={item.imageUrl}
-                />
-            </View>
+            <TouchableWithoutFeedback onPress={() => {Actions.doodleView({url: item.url})}}>
+                <View style={styles.rowContainer}>
+                    <Text style={styles.timeElapsed}>{item.timeElapsed}</Text>
+                    <Text numberOfLines={1} style={styles.title}>{item.title}</Text>
+                    <Text style={styles.content}>{item.content}</Text>
+                    <Image style={styles.doodleImage}
+                           source={item.imageUrl}
+                    />
+                </View>
+            </TouchableWithoutFeedback>
         );
     }
 }
